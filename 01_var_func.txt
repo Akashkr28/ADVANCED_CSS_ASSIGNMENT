@@ -1,0 +1,25 @@
+Q1. Explain the purpose of using the var() function in css. Also you have created two buttons with id named primaryBtn and secondaryBtn which should be given background using the var() function. The color code for primaryColor is #00b7ff and secondaryColor is #6c757d.
+
+Ans.:- In CSS, the `var()` function is used to define and use custom properties, also known as CSS variables. CSS variables allow you to define values once and reuse 	them throughout your CSS code. This is particularly useful for maintaining consistency and making global changes easier.
+
+	Here's how the `var()` function works:
+
+	1. Defining a CSS Variable:
+	   You define a CSS variable within a CSS rule using the `--` prefix followed by a name and then assign it a value. For example:
+	   
+	   :root {
+	       --main-color: #ff0000;
+	   }
+	   
+	   Here, `--main-color` is the name of the variable, and `#ff0000` is the value (in this case, a red color).
+
+	2. Using the CSS Variable:
+	   Once you've defined a variable, you can use it anywhere within your CSS code by calling the `var()` function and passing the variable name as an argument. 	For example:
+	   
+	   .header {
+	       color: var(--main-color);
+	   }
+	   
+	   This will set the color of the text within elements with the class `.header` to the value of the `--main-color` variable, which is red in this case.
+
+	The purpose of using `var()` function and CSS variables is primarily to make your CSS more maintainable, flexible, and DRY (Don't Repeat Yourself). By 	centralizing values in variables, you can easily update them in one place and have those changes reflected throughout your stylesheet. Additionally, CSS 	variables allow for more dynamic styling, enabling you to change values programmatically using JavaScript, media queries, or even CSS transitions.
